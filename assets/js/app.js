@@ -8,7 +8,7 @@ $(document).ready(function() {
         $("#rappers-view").empty();
         for (i = 0; i < rappers.length; i++) {
             var rapperButton = $("<button>");
-            rapperButton.addClass("rapper");
+            rapperButton.addClass("rapper btn btn-outline-info btn-sm");
             rapperButton.id = "rapper" + i;
             rapperButton.text(rappers[i]);
             rapperButton.attr("data-name", rappers[i]);
