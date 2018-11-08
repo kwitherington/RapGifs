@@ -47,8 +47,11 @@ $(document).ready(function() {
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
                 var rapperDiv = $("<div>");
-                var p = $("<p>");
+                var p = $("<h5>");
                 p.text(results[i].rating);
+                if (p.text == "g") {
+                    p.addClass("text-success");
+                }
                 var rapperImage = $("<img>");
                 rapperImage.attr('data-still', results[i].images.fixed_height_still.url);
                 rapperImage.attr('data-animate', results[i].images.fixed_height.url);
